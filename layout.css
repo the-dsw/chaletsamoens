@@ -41,7 +41,9 @@ h4 {
 p {
     text-align: center;
 }
-
+textarea {
+    color: white;
+}
 .title {
     color: #546E7A;
     font-size: 20px;

@@ -4,13 +4,18 @@ import '../templates/journal.html';
 
 let userId = Meteor.userId();
 
-Meteor.subscribe('messages');
+//subscribe 10 messages
+Meteor.subscribe('messages', 10);
 
 
 Template.journal$comments.helpers({
-    messages: {
-        date: new Date(),
-        message: 'This is a test from comment lines to show in our app',
+    messages: function () {
+        return Messages.find({}, {
+            sort: { createdAt: -1 }
+        });
+    },
+    // TODO: add photo to users, make a profile upload
+    message: {
         photo: ['images/yuna.jpg'],
     }
 });
