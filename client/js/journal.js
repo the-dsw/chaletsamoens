@@ -27,7 +27,7 @@ Template.journal$comments.helpers({
 
 UI.registerHelper('formatTime', function(context, options) {
     if(context)
-        return moment(context).format('DD/MM/YYYY, HH:MM');
+        return moment.utc(context).local().format('DD/MM/YYYY, HH:mm');
 });
 
 Template.journal$form.helpers({
