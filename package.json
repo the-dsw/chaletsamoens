@@ -20,12 +20,12 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/the-dsw/reservation.git"
+    "url": "git+https://github.com/the-dsw/chaletsamoens.git"
   },
   "author": "Mauricio Oporto <fmod@the-dsw.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/the-dsw/reservation/issues"
+    "url": "https://github.com/the-dsw/chaletsamoens/issues"
   },
-  "homepage": "https://github.com/the-dsw/reservation#readme"
+  "homepage": "https://github.com/the-dsw/chaletsamoens#readme"
 }
