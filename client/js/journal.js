@@ -46,6 +46,12 @@ Template.journal$form.events({
 
         const message =  $('#comments').val();
 
+        // Message successfully
+        function toast(){
+            var $toastContent = $('<span><i class="material-icons left light-green-text text-darken-2">&#xE876;</i>Message sent successfully</span>');
+            Materialize.toast($toastContent, 5000);
+        }
+
         // Add messages
         if (Meteor.user()) {
             Messages.insert({
@@ -55,10 +61,12 @@ Template.journal$form.events({
                 createdAt: ( new Date() ).toISOString()
             });
         }
+
+        toast();
+
         // Clear form
         $('#comments').val('');
         Session.set('numChars', 0);
-        console.log('Message added successfully!');
     }
 
 });
