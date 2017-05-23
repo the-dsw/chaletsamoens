@@ -22,7 +22,7 @@ Template.journal$comments.helpers({
 
 UI.registerHelper('formatTime', function(context, options) {
     if(context)
-        return moment(context).format('DD/MM/YYYY, hh:mm');
+        return moment(context).format('DD/MM/YYYY, HH:MM');
 });
 
 Template.journal$form.helpers({
