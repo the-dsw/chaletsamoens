@@ -46,7 +46,7 @@ Template.journal$form.events({
 
         const message =  $('#comments').val();
 
-        // Message successfully
+        // Message done successfully
         function toast(){
             var $toastContent = $('<span><i class="material-icons left light-green-text text-darken-2">&#xE876;</i>Message sent successfully</span>');
             Materialize.toast($toastContent, 5000);
@@ -62,6 +62,7 @@ Template.journal$form.events({
             });
         }
 
+        // Message successfully
         toast();
 
         // Clear form
