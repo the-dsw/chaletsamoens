@@ -1,0 +1,62 @@
+
+<template name="journal">
+    <style type="text/css">
+        body {
+            background-color: white;
+        }
+    </style>
+    <div class="row center journalColor">
+        <span>Description here</span>
+    </div>
+    <div class="row">
+        {{> journal$comments }}
+        {{> journal$form }}
+    </div>
+
+</template>
+
+<template name="journal$comments">
+    <div class="col s12 m6">
+        <ul class="collection list">
+            {{# if currentUser}}
+                <li class="collection-item avatar lineVertical">
+                    <img src="{{messages.photo}}" alt="" class="circle">
+                    <span class="title">{{currentUser.username}} <small>{{formatTime messages.date}}</small></span>
+                    <p>{{messages.message}}<br></p>
+                </li>
+            {{/if}}
+
+        </ul>
+    </div>
+</template>
+
+<template name="journal$form">
+    <div class="col s12 m6">
+        <div class="card lime darken-4 border hoverable">
+            <div class="card-content white-text">
+                <span class="card-title center-align">Ajouter une note</span>
+                <p>Découvrir les services pour simplifier votre séjour</p>
+            </div>
+            <div class="card-action center-align">
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">mode_edit</i>
+                                <textarea id="comments" name="comments" class="materialize-textarea"></textarea>
+                                <label for="comments">Message</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <button class="btn waves-effect waves-light" type="submit" {{disableButton}}>Go!
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</template>
+

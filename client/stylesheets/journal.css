@@ -1,0 +1,26 @@
+ul.list > li.lineVertical {
+    color: #0082CA;
+    border-left: 0 !important;
+
+}
+
+.center {
+    text-align: center;
+}
+
+.comments {
+    margin-left: 200px;
+    color: #cccccc;
+}
+
+.notes {
+    margin-left: 300px;
+    color: #cccccc;
+}
+
+.journalColor {
+    height: 100px;
+    background-color: white;
+    margin-bottom: 40px;
+    padding: 10px;
+}

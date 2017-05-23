@@ -1,0 +1,137 @@
+<head>
+    <meta charset="utf-8">
+    <title>Reservation chalet samoens</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i" rel="stylesheet">
+</head>
+
+
+<template name="defaultLayout">
+    {{> nav}}
+    {{> yield}} {{! See Iron Router layout in layout.js }}
+</template>
+
+<template name="loading">
+    <p>Loading...</p>
+</template>
+
+<template name="nav">
+    <header>
+        {{> nav$Menu}}
+    </header>
+</template>
+
+<template name="nav$Menu">
+    <div class="navbar-fixed">
+            <nav>
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo">RC</a>
+                <ul class="right hide-on-med-and-down">
+                    {{#if currentUser}}
+                        <li><!-- Message for logged in user -->
+                            <p>Hello, <strong>{{currentUser.username}}</strong></p>
+                        </li>
+                        <li><a href="/reservation"><i class="material-icons left">date_range</i>Reservation</a></li>
+                        <li><a href="/photos"><i class="material-icons left">add_a_photo</i>Photos</a></li>
+                        <li><a href="/news"><i class="material-icons left">announcement</i>News</a></li>
+                        <li><a href="/journal"><i class="material-icons left">message</i>Journal</a></li>
+                        <li><a href="/contacter"><i class="material-icons left">email</i>Contacter</a></li>
+                        <li><a href="#" class="logout"><i class="material-icons left">flash_off</i>Logout</a></li>
+                    {{else}}
+                        <li><a href="/login"><i class="material-icons left">person</i>Login</a></li>
+                        <li><a href="/register"><i class="material-icons left">person_add</i>Register</a></li>
+                    {{/if}}
+                </ul>
+            </div>
+        </nav>
+    </div>
+</template>
+
+<template name="Homepage">
+    {{> about }}
+    {{> cards }}
+    {{> footer }}
+</template>
+
+<template name="cards">
+    <div class="row">
+        <div class="col s12 m4 cardsTop">
+            <p><i class="material-icons large icon">hotel</i></p>
+            <p><span class="title">Faire une réservation</span></p>
+            <hr class="grey">
+            <p>Voir nos disponibilités pour votre réservation</p>
+            <p>
+                {{#if currentUser }}
+                    <a href="/reservation" class="waves-effect waves-light btn-large blue darken-3 btnTop">Choisir une date</a>
+                {{else}}
+                    <a href="#" class="waves-effect waves-light btn-large disabled btnTop">Choisir une date</a>
+                {{/if}}
+            </p>
+
+        </div>
+        <div class="col s12 m4 cardsTop">
+            <p><i class="material-icons large icon">local_library</i></p>
+            <p><span class="title">Les Nouvelles</span></p>
+            <hr class="grey">
+            <p>Découvrir les services pour simplifier votre séjour</p>
+            <p>
+                {{#if currentUser }}
+                    <a href="/news" class="waves-effect waves-light btn-large blue darken-3 btnTop">Quoi de neuf ?</a>
+                {{else}}
+                    <a href="#" class="waves-effect waves-light btn-large disabled btnTop">Quoi de neuf ?</a>
+                {{/if}}
+            </p>
+        </div>
+        <div class="col s12 m4 cardsTop">
+            <p><i class="material-icons large icon">add_to_photos</i></p>
+            <p><span class="title">Télécharger des photos</span></p>
+            <hr class="grey">
+            <p>Télécharger les photos que vous souhaitez partager</p>
+            <p>
+                {{#if currentUser }}
+                    <a href="/photos" class="waves-effect waves-light btn-large blue darken-3 btnTop">Télécharger</a>
+                {{else}}
+                    <a href="#" class="waves-effect waves-light btn-large disabled btnTop">Télécharger</a>
+                {{/if}}
+            </p>
+        </div>
+    </div>
+</template>
+
+<template name="about">
+    <div class="about-container">
+
+        <div class="about">
+
+            <h1>Chalet samoens</h1>
+
+            <h2>Bienvenue à notre site de réservation</h2>
+            <hr class="yellow"/>
+
+            <p class="bio">
+                Située en Haute-Savoie, entre le Lac Léman, le Lac d'Annecy et le Mont-Blanc,
+                Samoëns est une station de village authentique aux demeures de pierre dont l'origine remonte au Moyen-Age.
+                Si Samoëns possède tous les atouts d'une station de ski réputée, c'est aussi un village avec une identité alpine authentique,
+                un patrimoine naturel, architectural et gastronomique remarquable...
+
+            </p>
+        </div>
+    </div>
+</template>
+
+<template name="footer">
+    <div class="contact-me" id="hire-me">
+        <h3 class="contact-headline">Contact</h3>
+        <hr class="yellow" />
+        <p class="contact-info">
+            Currently entertaining new opportunities.
+            Please get in touch via email:
+        </p>
+
+        <p>
+            <a href="mailto:fmod@the-dsw.com" class="contact-link">
+                fmod@the-dsw.com
+            </a>
+        </p>
+    </div>
+</template>

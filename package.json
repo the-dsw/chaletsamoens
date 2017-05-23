@@ -1,0 +1,31 @@
+{
+  "name": "chalet-samoens",
+  "version": "0.1.0",
+  "description": "Reservation Chalet samöens",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.18.0",
+    "bcrypt": "^1.0.2",
+    "debug": "^2.2.0",
+    "lodash": "^4.17.4",
+    "meteor-node-stubs": "~0.2.0",
+    "q": "^1.4.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the-dsw/reservation.git"
+  },
+  "author": "Mauricio Oporto <fmod@the-dsw.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/the-dsw/reservation/issues"
+  },
+  "homepage": "https://github.com/the-dsw/reservation#readme"
+}

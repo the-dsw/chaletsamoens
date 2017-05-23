@@ -1,0 +1,128 @@
+body {
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+}
+
+.nav-wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+nav {
+    background-color: #0082CA;
+    height: auto;
+}
+
+li~li {
+    border-left: 1px solid #546E7A;
+}
+
+h1 {
+    color: white;
+    font-size: 50px;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+h2 {
+    color: white;
+    font-size: 18px;
+    margin-top: 0;
+}
+h3 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: normal;
+    margin-top: 100px;
+}
+h4 {
+    text-align: center;
+    font-size: 24px;
+}
+p {
+    text-align: center;
+}
+
+.title {
+    color: #546E7A;
+    font-size: 20px;
+}
+
+.cardsTop {
+    margin-top: 40px;
+}
+
+.icon {
+    color: #cccccc;
+}
+.about {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 20px;
+}
+.about-container {
+    background: url(images/bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 400px;
+    margin-top: -32px;
+}
+
+.bio {
+    color: white;
+    font-size: 14px;
+}
+
+.grey {
+    height: 3px;
+    background-color: #919191;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+/* #F5A623 */
+.yellow {
+    border-top: 5px double #FAD8A6;
+    width: 250px;
+    border-bottom: none;
+    border-right: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.border {
+    border-style: solid;
+    border-color: #0082CA;
+}
+
+.contact-me {
+    height: 350px;
+    background-color: #202020;
+    padding-top: 30px;
+}
+.contact-headline {
+    color: white;
+}
+.contact-info {
+    color: white;
+    font-size: 13px;
+    margin-top: 30px;
+}
+.contact-link {
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+}
+.errorColor {
+    color: white;
+}
+.btnTop {
+    margin-top: 10px;
+}
