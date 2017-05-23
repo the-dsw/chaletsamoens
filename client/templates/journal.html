@@ -18,13 +18,17 @@
 <template name="journal$comments">
     <div class="col s12 m6">
         <ul class="collection list">
-            {{#each messages}}
-                <li class="collection-item avatar lineVertical">
-                    <img src="{{message.photo}}" alt="" class="circle">
-                    <span class="title">{{user}} <small>{{formatTime createdAt}}</small></span>
-                    <p>{{this.message}}<br></p>
-                </li>
-            {{/each}}
+            {{#if notMessages}}
+                <p>{{notMessages}}</p>
+            {{else}}
+                {{#each messages}}
+                        <li class="collection-item avatar lineVertical">
+                            <img src="{{message.photo}}" alt="" class="circle">
+                            <span class="title">{{user}} <small>{{formatTime createdAt}}</small></span>
+                            <p>{{this.message}}<br></p>
+                        </li>
+                {{/each}}
+            {{/if}}
         </ul>
     </div>
 </template>

@@ -14,6 +14,11 @@ Template.journal$comments.helpers({
             sort: { createdAt: -1 }
         });
     },
+    notMessages: function() {
+        if(Messages.find({}).count() === 0) {
+            return 'Not messages yet!';
+        }
+    },
     // TODO: add photo to users, make a profile upload
     message: {
         photo: ['images/yuna.jpg'],
